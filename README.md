@@ -12,15 +12,34 @@
 [![MIT](https://img.shields.io/badge/license-MIT-0B7285?style=flat-square)](LICENSE)
 [![DSH](https://img.shields.io/badge/DSH-Web%20%2B%20Headless-5B4CF0?style=flat-square)](cordis.patch.yml)
 
-**Give text-only DeepSeek Harness agents eyes: image Q&A, long-screenshot OCR, UI restoration, and GUI visual tasks in one toolkit and Skill.**
+**What it thinks is what it sees — give text-only DeepSeek Harness agents eyes to understand images, locate interfaces, extract assets, and finish visual work with verifiable results.**
 
-🚀 Paste an image and ask directly | Install with one command | Built-in free quota
+🚀 Paste an image and ask directly | Install with one command | Built-in free quota | Seamless Web / Headless workflow
 
 🌐 **English** | [中文](README.zh.md)
 
 </div>
 
-If you use DeepSeek or another text-only model in DeepSeek Harness (DSH), you may have run into the same problems: the model cannot see a screenshot, generic descriptions miss the point, buttons have no usable coordinates, and a rebuilt page can look “close enough” without a way to measure the remaining difference.
+## Do these problems look familiar?
+
+If you use DeepSeek or another text-only model in DeepSeek Harness (DSH), you may have hit one or more of these barriers:
+
+1. **Pasted images are rejected.** You have to switch models manually or copy image paths into the conversation.
+2. **The model cannot see what matters.** Screenshots, webpages, and interfaces must be described again in words before the agent can help.
+3. **Generic captions are not enough.** Without coordinates, OCR, or task context, image tools fall short on UI restoration, long screenshots, and other demanding work.
+4. **Setup gets in the way.** You still have to find a vision provider and configure an API key before trying anything.
+
+## Highlights
+
+- **Paste and use it immediately.** Paste an image in DSH Web and the text-only route switches to its image-enabled (`Vision Toolkit`) variant without manual path copying or model changes.
+- **A seamless image workflow.** Native thumbnails, session history, and workspace paths stay intact; Web can preview artifacts, while Headless runs can continue from the same structured results.
+- **One command to install.** The built-in free Gemma 4 vision service is ready after installation, with no API key required.
+- **Built-in free quota.** The shared service currently includes 100 requests per client per day, 400 requests globally per day, and a 20-request burst per 60 seconds, with readable errors when a limit is reached.
+- **Vision guided by intent.** The agent extracts evidence for the task at hand, such as “Where is the error?” or “Where is the button?”, instead of returning a generic caption.
+- **Outputs that keep working.** Coordinates, OCR, crops, transparent PNGs, SVGs, heatmaps, and JSON can feed directly into the next step.
+- **A complete screenshot-to-verification loop.** Reference images, HTML screenshots, difference regions, and pixel comparison work together for UI restoration.
+
+## From understanding an image to finishing the task
 
 [`agent-vision-toolkit`](https://github.com/Anionex/agent-vision-toolkit) gives an agent more than image captions: it can read, locate, crop, trace, rebuild, and verify visual work. DSH Vision Toolkit is its native DeepSeek Harness integration, bringing that workflow into Web and Headless Profiles.
 
@@ -40,7 +59,6 @@ dsh plugin --profile web add @anionex/dsh-vision-toolkit
 <details>
 <summary><strong>Table of contents</strong></summary>
 
-- [Highlights](#highlights)
 - [Recent updates](#recent-updates)
 - [Who it is for](#who-it-is-for)
 - [See it in action](#see-it-in-action)
@@ -52,16 +70,6 @@ dsh plugin --profile web add @anionex/dsh-vision-toolkit
 - [Development and community](#development-and-community)
 
 </details>
-
-## Highlights
-
-- **Paste and use it immediately.** Paste an image in DSH Web and the text-only route switches to its `(Vision Toolkit)` variant without manual path copying or model changes.
-- **A seamless image workflow.** Native thumbnails, session history, and workspace paths stay intact; Web can preview artifacts and Headless can continue using the same structured results.
-- **One command to install.** The built-in free Gemma 4 vision service is ready after installation, with no API key required.
-- **Built-in free quota.** The shared service includes 100 requests per client per day, 400 requests globally per day, and a 20-request burst per 60 seconds, with readable errors when a limit is reached.
-- **Vision guided by intent.** The agent extracts evidence for the task at hand, such as “Where is the error?” or “Where is the button?”, instead of returning a generic caption.
-- **Outputs that keep working.** Coordinates, OCR, crops, transparent PNGs, SVGs, heatmaps, and JSON can feed directly into the next step.
-- **A complete screenshot-to-verification loop.** Reference images, HTML screenshots, difference regions, and pixel comparison work together for UI restoration.
 
 ## Recent updates
 

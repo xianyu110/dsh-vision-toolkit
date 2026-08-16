@@ -12,15 +12,34 @@
 [![MIT](https://img.shields.io/badge/license-MIT-0B7285?style=flat-square)](LICENSE)
 [![DSH](https://img.shields.io/badge/DSH-Web%20%2B%20Headless-5B4CF0?style=flat-square)](cordis.patch.yml)
 
-**所想即所见——给 DeepSeek Harness 里的纯文本 Agent 装上眼睛：图片问答、长图 OCR、前端 UI 还原、GUI 视觉任务，一套视觉工具箱和一个 Skill。**
+**所想即所见——给 DeepSeek Harness 里的纯文本 Agent 装上眼睛：看懂图片、定位界面、提取素材，并把视觉任务做到可验证。**
 
-🚀 粘贴图片，直接提问 ｜ 一行命令安装即用 ｜ 内置免费额度
+🚀 粘贴图片，直接提问 ｜ 一行命令安装即用 ｜ 内置免费额度 ｜ Web / Headless 无缝衔接
 
 🌐 [English](README.md) ｜ **中文**
 
 </div>
 
-如果你在 DeepSeek Harness（DSH）里使用 DeepSeek 等纯文本模型，却遇到模型看不到截图、图片描述没有重点、按钮没有准确坐标，或者 UI 还原只能凭感觉调的问题，这个插件就是为你准备的。
+## 你是否也遇到这些问题？
+
+如果你在 DeepSeek Harness（DSH）里使用 DeepSeek 等纯文本模型，这些障碍可能并不陌生：
+
+1. **图片粘贴不进去。** 一发图片就被拒绝，还要手动切换模型或复制文件路径。
+2. **模型看不到关键内容。** 面对报错截图、网页或界面，只能靠你重新用文字描述。
+3. **看图结果太笼统。** 普通图片描述缺少坐标、OCR 和任务上下文，做不了 UI 还原、长截图分析等复杂工作。
+4. **接入门槛太高。** 安装后还要申请视觉模型、配置 API Key，不能马上体验。
+
+## 亮点
+
+- **粘贴即可使用。** 在 DSH Web 里粘贴图片，文本模型会自动切换到看图模式（`Vision Toolkit`）变体，不需要手动复制路径或更换模型。
+- **无缝体验。** 图片保留原生缩略图、会话记录和工作区路径；Web 可以预览产物，无界面运行的 Headless 也能继续使用同一份结构化结果。
+- **一行命令安装即用。** 安装插件后默认使用内置免费 Gemma 4 视觉服务，不需要申请 API Key。
+- **内置免费额度。** 共享服务目前提供每客户端每天 100 次、全局每天 400 次和每 60 秒 20 次突发请求额度，并在触发限制时返回明确原因。
+- **带着意图看图。** Agent 不只生成通用描述，而是围绕“报错在哪里”“按钮在哪”等当前任务提取证据。
+- **结果可以继续工作。** 坐标、OCR、裁剪图、透明 PNG、SVG、热力图和 JSON 都能直接交给下一步。
+- **从截图到可验证结果。** 参考图、HTML 截图、差异定位和像素对比组成一条完整的 UI 还原闭环。
+
+## 从看懂图片，到完成任务
 
 [`agent-vision-toolkit`](https://github.com/Anionex/agent-vision-toolkit) 的视觉能力不只停留在图片描述：Agent 可以读取、定位、裁剪、描摹、还原和验证视觉内容。DSH Vision Toolkit 是这套工具箱面向 DeepSeek Harness 的原生接入，让它进入 Web 和 Headless Profile。
 
@@ -29,7 +48,7 @@
 1. **视觉工具和 Skill**：让 Agent 知道什么时候该看图、定位、OCR、裁剪、描摹或做像素对比。
 2. **DSH 原生接入**：把这些能力放进 Profile、会话、Settings、Artifacts 和 Web 界面，并提供安装即可使用的免费 Gemma 4 视觉服务。
 
-> **安装即可使用。** 默认接入内置免费 Gemma 4 视觉服务，不需要申请 API Key；裁图、像素对比、颜色分析、前景提取、SVG 描摹和网页截图等本地工具也不消耗视觉 API 请求。
+> **安装即可使用。** 默认接入内置免费 Gemma 4 视觉服务，不需要申请 API Key。
 
 ```sh
 dsh plugin --profile web add @anionex/dsh-vision-toolkit
@@ -40,7 +59,6 @@ dsh plugin --profile web add @anionex/dsh-vision-toolkit
 <details>
 <summary><strong>目录</strong></summary>
 
-- [亮点](#亮点)
 - [最近更新](#最近更新)
 - [适合谁用](#适合谁用)
 - [实际效果](#实际效果)
@@ -52,16 +70,6 @@ dsh plugin --profile web add @anionex/dsh-vision-toolkit
 - [开发与社区](#开发与社区)
 
 </details>
-
-## 亮点
-
-- **粘贴即可使用。** 在 DSH Web 里粘贴图片，文本模型会自动切换到 `(Vision Toolkit)` 变体，不需要手动复制路径或更换模型。
-- **无缝体验。** 图片保留原生缩略图、会话记录和工作区路径；Web 可以预览产物，Headless 也能继续使用同一份结构化结果。
-- **一行命令安装即用。** 安装插件后默认使用内置免费 Gemma 4 视觉服务，不需要申请 API Key。
-- **内置免费额度。** 共享服务提供每客户端每天 100 次、全局每天 400 次和每 60 秒 20 次突发请求额度，并在触发限制时返回明确原因。
-- **带着意图看图。** Agent 不只生成通用描述，而是围绕“报错在哪里”“按钮在哪”等当前任务提取证据。
-- **结果可以继续工作。** 坐标、OCR、裁剪图、透明 PNG、SVG、热力图和 JSON 都能交给下一步。
-- **从截图到可验证结果。** 参考图、HTML 截图、差异定位和像素对比组成一条完整 UI 还原闭环。
 
 ## 最近更新
 
