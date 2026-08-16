@@ -14,7 +14,7 @@
 
 **Give text-only DeepSeek Harness agents eyes: image Q&A, long-screenshot OCR, UI restoration, and GUI visual tasks in one toolkit and Skill.**
 
-🎯 Visual capability does not have to live inside the model. It can live in the harness.
+🚀 Paste an image and ask directly | Install with one command | Built-in free quota
 
 🌐 **English** | [中文](README.zh.md)
 

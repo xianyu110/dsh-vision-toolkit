@@ -14,7 +14,7 @@
 
 **所想即所见——给 DeepSeek Harness 里的纯文本 Agent 装上眼睛：图片问答、长图 OCR、前端 UI 还原、GUI 视觉任务，一套视觉工具箱和一个 Skill。**
 
-🎯 视觉能力不一定长在模型上，也可以长在 harness 上。
+🚀 粘贴图片，直接提问 ｜ 一行命令安装即用 ｜ 内置免费额度
 
 🌐 [English](README.md) ｜ **中文**
 
