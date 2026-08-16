@@ -40,10 +40,10 @@ dsh plugin --profile web add @anionex/dsh-vision-toolkit
 <details>
 <summary><strong>Table of contents</strong></summary>
 
+- [Highlights](#highlights)
 - [Recent updates](#recent-updates)
 - [Who it is for](#who-it-is-for)
 - [See it in action](#see-it-in-action)
-- [Highlights](#highlights)
 - [Quick start: three steps](#quick-start-three-steps)
 - [Common workflows](#common-workflows)
 - [Toolbox](#toolbox)
@@ -52,6 +52,16 @@ dsh plugin --profile web add @anionex/dsh-vision-toolkit
 - [Development and community](#development-and-community)
 
 </details>
+
+## Highlights
+
+- **Paste and use it immediately.** Paste an image in DSH Web and the text-only route switches to its `(Vision Toolkit)` variant without manual path copying or model changes.
+- **A seamless image workflow.** Native thumbnails, session history, and workspace paths stay intact; Web can preview artifacts and Headless can continue using the same structured results.
+- **One command to install.** The built-in free Gemma 4 vision service is ready after installation, with no API key required.
+- **Built-in free quota.** The shared service includes 100 requests per client per day, 400 requests globally per day, and a 20-request burst per 60 seconds, with readable errors when a limit is reached.
+- **Vision guided by intent.** The agent extracts evidence for the task at hand, such as “Where is the error?” or “Where is the button?”, instead of returning a generic caption.
+- **Outputs that keep working.** Coordinates, OCR, crops, transparent PNGs, SVGs, heatmaps, and JSON can feed directly into the next step.
+- **A complete screenshot-to-verification loop.** Reference images, HTML screenshots, difference regions, and pixel comparison work together for UI restoration.
 
 ## Recent updates
 
@@ -110,15 +120,6 @@ The repository includes a reproducible UI-restoration example: the agent renders
   <img src="examples/ui-restoration/assets/initial.png" width="49%" alt="Initial UI implementation with measurable layout and styling differences" />
   <img src="examples/ui-restoration/assets/implementation.png" width="49%" alt="UI implementation after visual diagnosis and pixel comparison" />
 </p>
-
-## Highlights
-
-- **Free by default.** New installations use the built-in Gemma 4 service without requiring another account or API key.
-- **Focused on the current task.** The agent sends the reason it needs to inspect the image, so the result emphasizes useful evidence instead of producing a generic caption.
-- **Outputs you can keep working with.** Coordinates, OCR, transparent PNGs, SVGs, screenshots, heatmaps, and JSON can feed directly into the next step.
-- **Built for UI and screenshot work.** Reference analysis, element location, asset extraction, HTML rendering, and pixel comparison form one continuous workflow.
-- **Local where possible.** Crop, trace, pixel diff, color, foreground, and HTML screenshot operations do not need a remote vision model.
-- **The same capabilities in Web and Headless.** Web users can preview and download artifacts; Headless runs still receive replayable structured results and workspace paths.
 
 ## Quick start: three steps
 

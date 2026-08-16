@@ -40,10 +40,10 @@ dsh plugin --profile web add @anionex/dsh-vision-toolkit
 <details>
 <summary><strong>目录</strong></summary>
 
+- [亮点](#亮点)
 - [最近更新](#最近更新)
 - [适合谁用](#适合谁用)
 - [实际效果](#实际效果)
-- [亮点](#亮点)
 - [快速开始：三步完成](#快速开始三步完成)
 - [常见任务](#常见任务)
 - [工具一览](#工具一览)
@@ -52,6 +52,16 @@ dsh plugin --profile web add @anionex/dsh-vision-toolkit
 - [开发与社区](#开发与社区)
 
 </details>
+
+## 亮点
+
+- **粘贴即可使用。** 在 DSH Web 里粘贴图片，文本模型会自动切换到 `(Vision Toolkit)` 变体，不需要手动复制路径或更换模型。
+- **无缝体验。** 图片保留原生缩略图、会话记录和工作区路径；Web 可以预览产物，Headless 也能继续使用同一份结构化结果。
+- **一行命令安装即用。** 安装插件后默认使用内置免费 Gemma 4 视觉服务，不需要申请 API Key。
+- **内置免费额度。** 共享服务提供每客户端每天 100 次、全局每天 400 次和每 60 秒 20 次突发请求额度，并在触发限制时返回明确原因。
+- **带着意图看图。** Agent 不只生成通用描述，而是围绕“报错在哪里”“按钮在哪”等当前任务提取证据。
+- **结果可以继续工作。** 坐标、OCR、裁剪图、透明 PNG、SVG、热力图和 JSON 都能交给下一步。
+- **从截图到可验证结果。** 参考图、HTML 截图、差异定位和像素对比组成一条完整 UI 还原闭环。
 
 ## 最近更新
 
@@ -110,15 +120,6 @@ dsh plugin --profile web add @anionex/dsh-vision-toolkit
   <img src="examples/ui-restoration/assets/initial.png" width="49%" alt="像素对比前仍有布局和样式偏差的初版 UI" />
   <img src="examples/ui-restoration/assets/implementation.png" width="49%" alt="经过视觉定位和像素对比后的 UI 实现" />
 </p>
-
-## 亮点
-
-- **安装后就能免费用。** 新用户默认使用内置 Gemma 4 服务，不需要注册新的模型平台，也不需要先填写 Key。
-- **不只描述图片，而是解决当前问题。** Agent 会把当前任务作为视觉关注点，优先返回这一轮真正要用到的内容。
-- **返回可以继续工作的结果。** 坐标、OCR、透明 PNG、SVG、截图、热力图和 JSON 都能直接交给下一步。
-- **特别适合 UI 和截图工程。** 从参考图、元素定位、素材提取到 HTML 截图和像素对比，形成完整闭环。
-- **能本地做的就本地做。** 裁剪、描摹、像素对比、颜色、前景和 HTML 截图不需要上传到视觉模型。
-- **Web 与 Headless 使用同一套能力。** Web 中可以预览和下载产物，Headless 中仍会得到可重放的结构化结果和文件路径。
 
 ## 快速开始：三步完成
 
